@@ -47,15 +47,13 @@ body{
     color: #03a9f4;
 }
 
-.item-single{
-    width: calc(100% / 2 - 60px);
-    float: left;
-    margin: 0 30px;
-    overflow: hidden;
-    height: 600px;
+.items{
+    width: 418px;
+    display: inline-block;
+    margin: 0 30px 80px;
 }
 
-.single-category{
+.category-name{
     color: #b4ad9e;
     padding-top: 30px;
     padding-bottom: 20px;
@@ -73,25 +71,19 @@ p{
     line-height: 1.5;
 }
 
-.content{
-    overflow: hidden;
-    clear: both;
-}
-
-.button{
+.load-more{
     text-align: center;
+    margin-bottom: 30px;           
 }
 
-.button a{
-    display: block;
+.load-more a{
+    display: inline-block;
     margin: auto;
-    width: 165px;
-    height: 60px;
-    line-height: 60px;
+    line-height: 28px;
     color: #626262;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 30px;
     border: 1px solid #626262;
     text-decoration: none;
+    padding: 15px 33px;
 }
