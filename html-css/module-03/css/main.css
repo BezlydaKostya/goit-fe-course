@@ -12,7 +12,7 @@ body{
 }
 
 .wrap{
-    width: 960px;
+    width: 660px;
     margin: auto;
 }
 
@@ -32,7 +32,11 @@ body{
 .menu ul li{
     display: inline-block;
     text-transform: uppercase;
-    margin: 0 60px;
+    margin-right: 60px;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
 }
 
 .menu ul li a{
