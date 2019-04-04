@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+@font-face {
+    font-family:"Myriadpro": 
+    src: url("../fonts/Myriadpro.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Myriadpro";
+}
+
+header {
+    min-height: 91px;
+}
+
+.container {
+    max-width: 1110px;
+    margin: auto;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: -.2px;
+    font-family: "Roboto";
+    font-weight: 300;
+    color:#555252;   
+    line-height: 91px;
+}
+
+.logo span {
+    color: #1abc9c;
+    font-weight: 900;
+}
+
+.menu li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu li a{
+    font-family: "Open Sans";
+    color: #0f0101;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: -.2px;
+    font-weight: 700;
+    transition: color .2s;
+    text-transform: uppercase;
+    line-height: 91px;
+}
+
+.menu li a:hover{
+    color: #1abc9c;
+}
+
+.menu li:not(:last-child) {
+    margin-right: 34px;
+}
+
+.menu {
+    float: right;
+    vertical-align: middle;
+}
+
+.menu ul {
+    clear: both;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slider .image-container{
+    position: relative;
+}
+
+.slider .image-container .content-slide{
+    width: 1110px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 195px;
+    margin: auto;
+    color: #ffffff;
+    font-family: "Roboto";
+    letter-spacing: -.2px;
+}
+
+.slider .image-container .content-slide h1{
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 82px;
+    width: 764px;
+    margin: auto
+}
+
+.slider .image-container .content-slide p{
+    font-weight: 300;
+    line-height: 54px;
+    width: 764px;
+    margin: auto;
+}
+
+.slider-ctrl {
+    position: absolute;
+    border: none;
+    display: inline-block;
+    width: 108px;
+    height: 106px;
+    background: #4d9a88;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(78, 198, 171);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color .2s;
+    cursor: pointer;
+}
+
+.slider-ctrl:hover{
+    background-color: rgba(78, 198, 171,  0.651);
+}
+
+.slider-ctrl-prev {
+    left: 0;
+    background-image: url('../img/left_slide.png');
+}
+
+.slider-ctrl-next {
+    right: 0;
+    background-image: url('../img/right_slide.png');
+}
+
+.slider-pagination-item {
+    display: inline-block;
+    width: 164px;
+    height: 7px;
+    background: #b0b8b9
+}
+
+.slider-pagination-active {
+    background: #20a8da;
+}
+
+.slider-pagination {
+    position: absolute;
+    bottom: -166px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.content{
+    background-color: #e9f0fd;
+    padding: 90px 0;
+}
+
+.content h2{
+    position: relative;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: -.2px;
+    color: #515151;
+    display: block;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.content h2:after{
+    content: '';
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 7px;
+    width: 164px;
+    background-color: #1abc9c;    
+}
+
+.item-container{
+    clear: both;
+    overflow: hidden;
+}
+
+.item-container .items{
+    float: left;
+    width: 255px;
+}
+
+.item-container .items + .items{
+    margin-left: 30px;
+}
+
+.image-item{
+    position: relative;
+    height: 322px;
+}
+
+.image-item .hover-button{
+    position: absolute;
+    top: 11px; 
+    bottom: 11px;
+    left: 11px;
+    right: 11px;
+    margin: auto;
+    background-color: rgba(000,000,000,.55);
+    padding: 78px 32px 30px 32px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.image-item .hover-button .top-button{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .3s;
+}
+
+.image-item .hover-button .top-button + .top-button{
+    margin-left: 5px;
+}
+
+.image-item .hover-button .top-button.wish{
+    background-image: url('../img/wish-list.png');
+}
+.image-item .hover-button .top-button.compare{
+    background-image: url('../img/compare.png');
+}
+.image-item .hover-button .top-button.clock{
+    background-image: url('../img/clock.png');
+}
+
+.image-item .hover-button .add-to-cart{
+    border: 1px solid #fff;
+    background-color: #323232;
+    width: 168px;
+    float: left;
+    line-height: 49px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    letter-spacing: -.2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    text-align: left;
+    padding: 0 10px 0 61px;
+    background-repeat: no-repeat;
+    background-position: 13px center;
+    background-image: url('../img/Korzina.png');
+    transition: all .3s;
+}
+
+.image-item .hover-button .top-button:hover,
+.image-item .hover-button .add-to-cart:hover{
+    border-color: #1abc9c;
+    background-color: #1abc9c;
+    cursor: pointer;
+}
+
+.price-item{
+    clear: both;
+    overflow: hidden;
+    color: #ffffff;
+    line-height: 40px;
+    font-family: "Roboto";
+    font-weight: 900;
+    letter-spacing: -.2px;
+    font-size: 18px;
+}
+
+.price-item .title{
+    float: left;
+    background-color: #323232;
+    padding: 0 14px;
+    width: 200px; 
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+.price-item .price{
+    float: right;
+    width: 55px;
+    background-color: #8c8c8c;
+    text-align: center;
+    padding: 0 5px;
+    transition: all .3s;
+}
+
+.items:hover .hover-button{
+    opacity: 1;
+}
+.items:hover .price-item .title{
+    background-color: #1abc9c;
+}
+.items:hover .price-item .price{
+    background-color: #7fd9c7;
+}
+footer{
+    padding: 0 15px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    letter-spacing: -.2px;
+    background-color: #323232;
+    color: #fefefe;
+    line-height: 88px;
+    font-size: 16px;
+}
+footer a{
+    color: #46bfa9;
+    text-decoration: none;
+}
