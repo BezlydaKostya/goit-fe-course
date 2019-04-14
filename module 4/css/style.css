@@ -45,17 +45,17 @@
     color: #1abc9c;
   }
   
-  .top {
-    float: right;
-  }
-  
   .site-nav {
     line-height: 11px;
     list-style: none;
     display: inline-block;
     text-align: right;
-    margin-top: 43px;
     margin-right: 30px;
+  }
+
+  .page-header .site-ul{
+    margin-top: 36px;
+    float: right;
   }
   
   .site-nav a {
@@ -68,7 +68,6 @@
     font-size: 14px;
     line-height: 32px;
     display: block;
-    float: left;
   }
   
   .site-nav a:hover {
@@ -81,27 +80,34 @@
   .gallery {
     width: 1170px;
     margin: auto;
-    font-size: 0;
+    padding-bottom: 40px;
   }
   
-  .featured-title {
+  .featured-title,
+  .blog-title {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
     font-size: 48px;
-    line-height: 32px;
+    line-height: 1;
+    position: relative;
+    padding-bottom: 32px;
+    margin-bottom: 88px;
   }
   
-  .featured-title::after {
+  .featured-title::after,
+  .blog-title::after {
     display: block;
     content: "";
     height: 6px;
     width: 164px;
     background-color: #1abc9c;
     margin: auto;
-    margin-top: 32px;
-    margin-bottom: 92px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   
   .featured-item {
@@ -118,17 +124,18 @@
   .featured-item:nth-child(4n) {
     margin-right: 0;
   }
+
+  .featured-item:nth-last-child(-n+4){
+    margin-bottom: 0;
+  }
   
   .featured-item:nth-child(4n + 1) {
     margin-left: 30px;
   }
   
-  .featured-item:last-child {
-    margin-bottom: 105px;
-  }
-  
   .featured {
     text-align: center;
+    margin-bottom: 105px;
   }
   
   .featured-item a,
@@ -145,15 +152,21 @@
     line-height: 40px;
     position: relative;
   }
+
+  .price-container a{
+      float: left;
+      width: calc(100% - 54px);
+  }
+  .price-container p{
+      float: right;
+      width: 54px;
+  }
   
   .featured-item a {
     background-color: #323232;
+    padding: 0 14px;
   }
-  
-  .featured-item a::before {
-    content: "";
-    margin-right: 14px;
-  }
+
   
   .price {
     width: 54px;
@@ -186,38 +199,24 @@
   
   /* BLOG */
   .blog {
-  width: 1170px;
-  margin: auto;
-  }
-  
-  .blog-title {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 48px;
-    line-height: 32px;
-  }
-  
-  .blog-title::after {
-    display: block;
-    content: "";
-    height: 6px;
-    width: 164px;
-    background-color: #1abc9c;
+    width: 1170px;
     margin: auto;
-    margin-top: 32px;
-    margin-bottom: 81px;
+    padding-bottom: 40px;
   }
   
   .blog-image {
     margin-bottom: 15px;
   }
+
+  .blog-list{
+    text-align: center;
+  }
   
   .blog-list-item {
     display: inline-block;
     width: 350px;
-    margin: 15px 15px 15px 15px;
+    margin: 0 30px 0 0;
+    text-align: left;
   }
   
   .blog-name {
@@ -225,7 +224,6 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 26px;
-    text-align: left;
   }
   
   .blog-name::after {
@@ -246,8 +244,7 @@
     text-align: left;
     margin-bottom: 19px;
   }
-  
-  button a {
+  .read-more{
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -255,10 +252,7 @@
     width: 160px;
     text-decoration: none;
     color: #fff;
-    cursor: pointer;
-  }
-  
-  button {
+    text-align: center;
     display: block;
     background-color: #4ec6ab;
     border: 0px;
