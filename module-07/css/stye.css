@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@font-face {
+    font-family: "Wisdom Script AJ";
+    src: url("../fonts/Wisdom Script AJ.otf");
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+.container {
+    max-width: 940px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    flex: 0 0 25%;
+    min-width: 25%;
+    line-height: 80px;
+}
+
+header .logo a {
+    display: inline-block;
+    font-family: 'Wisdom Script AJ';
+    font-weight: 400;
+    text-decoration: none;
+    color: #fed136;
+    font-size: 26px;
+}
+
+header .menu{
+    flex: 0 0 75%;
+    max-width: 75%; 
+    line-height: 79px;
+}
+
+header .menu ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+header .menu ul li:not(:last-child) {
+    margin-right: 40px;
+}
+
+header .menu ul li a {
+    display: inline-block;
+    position: relative;
+    color: #222222;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s;
+    font-size: 14px;
+}
+
+header .menu ul li a:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 19px;
+    height: 3px;
+    background-color:#222222;
+    width: 0;
+    transition: all .3s;
+}
+
+header .menu ul li a:hover {
+    color: #fed136;
+}
+
+header .menu ul li a:hover:after {
+    width: 100%;
+    background-color: #fed136;
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 40px;
+    color: #222222;
+    padding: 110px 0 50px;
+}
+
+
+.title p {
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: none;
+}
+
+.service-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 120px;
+}
+
+.service-container li{
+    flex: 0 0 300px;
+    max-width: 300px;
+    padding-left: 59px;
+    position: relative;
+    font-family: 'Quicksand';
+    font-weight: 400;
+    color: #c9c9c9;
+    font-size: 15px;
+    margin-bottom: 80px;
+    list-style: none;
+}
+
+
+.service-container li:nth-last-child(-n+3){
+    margin-bottom: 0;
+}
+
+.service-container li p{
+    line-height: 1.5;
+}
+
+.service-container .img-container{
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 3px solid #fed136;
+    position: relative;
+    margin: 20px auto;
+}
+
+.service-container .img-container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.service-container li .title-services {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    color: #222222;
+    padding-bottom: 20px;
+}
+.feed-back form textarea::-webkit-input-placeholder,
+.feed-back form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    text-transform: uppercase;
+    color: #bbbbbb;
+    letter-spacing: -.25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.feed-back form textarea::-moz-placeholder,
+.feed-back form input::-moz-placeholder { /* Firefox 19+ */
+    text-transform: uppercase;
+    color: #bbbbbb;
+    letter-spacing: -.25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.feed-back form textarea:-ms-input-placeholder,
+.feed-back form input:-ms-input-placeholder { /* IE 10+ */
+    text-transform: uppercase;
+    color: #bbbbbb;
+    letter-spacing: -.25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+.feed-back form textarea:-moz-placeholder,
+.feed-back form input:-moz-placeholder { /* Firefox 18- */
+    text-transform: uppercase;
+    color: #bbbbbb;
+    letter-spacing: -.25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.feed-back {
+    background-color: #222222;
+    padding: 50px 0;
+    background-image: url(../img/map.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.title-feed-back .title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+}
+
+.title-feed-back .title p{
+    font-family: 'Quicksand';
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: none;
+    color: #777777;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.right-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+}
+
+.right-column input{
+    width: 100%;
+    height: 52px;
+    padding: 0 20px;
+    border-radius: 3px;
+    border: 0;
+}
+
+.right-column input:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+
+.left-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+}
+
+.left-column textarea{
+    width: 100%;
+    height: 215px;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 3px;
+}
+
+.btn-column {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.btn-column input {
+    width: 240px;
+    height: 65px;
+    background-color: #fed136;
+    border: none;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
