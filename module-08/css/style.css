@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    position: relative;
+}
+
+.container{
+    max-width: 975px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+header{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+header .logo a{
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+    transition: opacity .2s;
+}
+
+header .logo a:hover{
+    opacity: 0.7;   
+}
+
+header .logo{
+    position: absolute;
+    top: 157px;
+    z-index: 2;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+header .site-nav {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 2;
+}
+
+header .site-nav ul{
+    display: flex;
+    justify-content: center;
+}
+
+header .site-nav ul li a{
+    display: inline-flex;
+    line-height: 36px;
+    padding: 0 19px;
+}
+header .site-nav ul li:first-child a{
+    transition: opacity .2s;
+}
+header .site-nav ul li:first-child a:hover{
+    opacity: 0.7;
+}
+header .site-nav ul li + li a{
+    border: 2px solid #fff;
+    border-radius: 36px;
+    transition: all .3s;
+}
+header .site-nav ul li + li a:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+header .site-nav li{
+    list-style: none;
+}
+
+header .site-nav li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.banner{
+    min-height: 540px;
+    background-image: url('../img/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+.banner:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #000000;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.banner h1{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 29px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 222px;
+    padding-bottom: 14px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.banner p{
+    font-family:'Roboto';
+    font-weight: 300;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 23px;
+    margin: 0 30px;
+}
+
+.banner a{
+    display: block;
+    margin: 15px auto 0;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: rgb(255, 78, 80);
+    max-width: 280px;
+    line-height: 36px;
+    text-align: center;
+    transition: all .3s;
+    border: 2px solid rgb(255, 78, 80);
+}
+
+.banner a:hover{
+    background-color: transparent;
+    color: rgb(255, 78, 80);
+}
+
+.team{
+    padding-top: 70px;
+    padding-bottom: 55px;
+}
+
+.items-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.items-wrapper h2{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 22px;
+    padding: 0 10px;
+    text-align: center;
+    max-width: 100%;
+    flex: 0 0 100%;
+    color: #333333;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 230px;
+    flex: 0 0 230px;
+    text-align: center;
+    align-items: center;
+    margin: 15px 10px;
+}
+.item .img-wrap{
+    position: relative;
+    width: 121px;
+    height: 121px;
+    margin: auto;
+}
+
+.item .img-wrap:after{
+    content: '';
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.item .img-wrap:before{
+    content: '';
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+.btn{
+    text-align: center;
+}
+.btn a{
+    width: 280px;
+    line-height: 40px;
+    border-radius: 40px;
+    color: #ff4e50;   
+    border: 2px solid #ff4e50;
+    display: inline-block;
+    margin: 5px auto 0;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    transition: all .2s;
+    text-decoration: none;
+}
+
+.btn a:hover{
+    text-decoration: none;
+    background-color: #ff4e50;
+    color: #ffffff;    
+}
+
+.item.hunter .img-wrap:after{
+    background-color: #ff4e50; 
+}
+.item.hunter .img-wrap:before{
+    background-image: url('../img/tv.png');
+}
+
+.item.marsha .img-wrap:after{
+    background-color: #ffa507;
+}
+.item.marsha .img-wrap:before{
+    background-image: url('../img/time.png');
+}
+
+.item.walker .img-wrap:after{
+    background-color: #1cd7ad;
+}
+.item.walker .img-wrap:before{
+    background-image: url('../img/cup.png');
+}
+
+.item.bradley .img-wrap:after{
+    background-color: #4e73db;
+}
+.item.bradley .img-wrap:before{
+    background-image: url('../img/telegram.png');
+}
+
+.item h3{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 18px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.item p{
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #666666;
+    font-size: 13.97px;
+}
+
+
+@media (min-width: 768px){
+    header{
+        top: 45px;
+    }
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+    header .logo,
+    header .site-nav{
+        position: static;
+        margin: 0;
+    }
+    .banner h1{
+        max-width: 505px;
+        font-size: 52px;
+    }
+    .banner a{
+        margin: 20px auto 0;
+    }
+
+    .items-wrapper {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .item {
+        margin: 40px 25px;
+    }
+
+    .btn a{
+        width: 192px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 1440px){
+    .items-wrapper{
+        max-width: 100%;
+    }
+
+    .item {
+        margin: 30px 7px;
+        max-width: 220px;
+        flex: 0 0 220px;
+    }
+
+    .btn a{
+        margin-top: 0;
+    }
+}
